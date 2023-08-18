@@ -99,9 +99,9 @@ export default function Player({song}:{song?:IOTrack}) {
     <div style={{ display: "flex", flexDirection: "column" }}>
       {song && (
         <>
-          <h2 className="text-2xl mb-4">Playing {song.title}</h2>
+          <h2 className="text-2xl mb-4">Playing “{song.title}”</h2>
           <div className="flex flex-col">
-            <div className="flex mb-4">
+            <div className="flex mb-4 flex-col sm:flex-row">
               {song.tracks.map((t, i) => {
                 const current = i === currentTrack;
                 return (

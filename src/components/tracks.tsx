@@ -9,11 +9,11 @@ export default function Tracks({ioData}:{ioData:IOData}) {
   const [currentSong, setCurrentSong] = useState<IOTrack>();
   return (
     <div className="justify-start w-full">
-      <ol style={{ listStyle: "decimal" }} className="w-1/2 mb-8">
+      <ol style={{ listStyle: "decimal", paddingLeft: '1.5em' }} className={`mb-8 md:columns-2`}>
         {ioData.map((song) => {
           const current = song === currentSong;
           return (
-            <li key={song.title}>
+            <li key={song.title} className="w-5/6 mb-2">
               <Button
                 variant="contained"
                 disableElevation
